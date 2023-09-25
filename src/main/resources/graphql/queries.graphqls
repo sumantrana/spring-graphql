@@ -1,0 +1,17 @@
+type Query {
+
+    customers: [Customer]
+    customersReactive: [Customer]
+    customerById(id: ID): Customer
+
+}
+
+type Customer {
+    id: ID,
+    name: String
+    profile: Profile
+}
+
+type Profile {
+    id: ID
+}
