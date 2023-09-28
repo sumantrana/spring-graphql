@@ -3,7 +3,15 @@ type Query {
     customers: [Customer]
     customersReactive: [Customer]
     customerById(id: ID): Customer
+    greeting: Greeting
+}
 
+type Mutation {
+    addCustomer(name:String): Customer
+}
+
+type Subscription {
+    greetings: Greeting
 }
 
 type Customer {
@@ -14,4 +22,8 @@ type Customer {
 
 type Profile {
     id: ID
+}
+
+type Greeting {
+    greeting: String
 }
